@@ -1,6 +1,7 @@
 package myClasses;
 
 // Example class "Robot"
+// NOT functional on FTC bot and only for an example of a constructed class
 public class Robot{
 
     // Private modifier allows variables to be accessed only in the Robot class
@@ -36,10 +37,10 @@ public class Robot{
         System.out.println("Methods:");
         System.out.println("myRobot.changeName(name)");
         System.out.println("myRobot.status()");
-        System.out.println("myRobot.moveRight(deltaX)");
-        System.out.println("myRobot.moveLeft(deltaX)");
-        System.out.println("myRobot.moveUp(deltaY)");
-        System.out.println("myRobot.moveDown(deltaY)");
+        System.out.println("myRobot.getX()");
+        System.out.println("myRobot.getY()");
+        System.out.println("myRobot.moveX(direction, units)");
+        System.out.println("myRobot.moveY(direction, units)");
 
     }
 
@@ -59,40 +60,52 @@ public class Robot{
 
     }
 
-    // Adds to the x coordinate of the robot object
-    // returns the new x coordinate (int)
-    public int moveRight(int deltaX){
+    // returns int x position of a robot
+    public int getX(){
 
-        this.x += deltaX;
-        return x;
+        return this.x;
 
     }
 
-    // Subtracts from the x coordinate of the robot object
-    // returns the new x coordinate (int)
-    public int moveLeft(int deltaX){
+    // returns int y position of a robot
+    public int getY(){
 
-        this.x -= deltaX;
-        return x;
+        return this.y;
 
     }
 
-    // Adds from the y coordinate of the robot object
-    // returns the new y coordinate (int)
-    public int moveUp(int deltaY){
+    // Changes X position of a robot
+    // returns X pos int
+    public int moveX(String direction, int units){
 
-        this.y += deltaY;
-        return y;
+        if (direction == "right" || direction == "Right"){
+            this.x += units;
+        }
+        else if (direction == "left" || direction == "Left"){
+            this.x -= units;
+        }
+        else{
+            System.out.println("Not a valid direction.");
+        }
 
-    }
+        return this.x;
+   }
 
-    // Subtracts from the y coordinate of the robot object
-    // returns the new y coordinate (int)
-    public int moveDown(int deltaY){
+   // Changes Y position of a robot
+   // returns Y pos int
+   public int moveY(String direction, int units){
 
-        this.y -= deltaY;
-        return y;
+        if (direction == "forward" || direction == "Forward"){
+            this.y += units;
+        }
+        else if (direction == "back" || direction == "backward" || direction == "Back" || direction == "Backward"){
+            this.y -= units;
+        }
+        else {
+            System.out.println("Not a valid direction.");
+        }
 
-    }
+        return this.y;
+   }
 
 }
