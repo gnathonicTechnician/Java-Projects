@@ -1,4 +1,7 @@
 // Importing the Scanner Class
+// This will present how to call and use a class
+
+
 // Scanner is a built in class provided by Java
 import java.util.Scanner; 
 
