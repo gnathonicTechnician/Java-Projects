@@ -9,7 +9,7 @@ public class Robot{
     private int x;
     private int y;
 
-    // Constructors: initializes the instance of a class when calles
+    // Constructors: initializes the instance of a class when called
 
     // Default constructor when no arguments are passed
     public Robot(){
