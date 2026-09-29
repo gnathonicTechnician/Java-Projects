@@ -1,6 +1,16 @@
 # Hello Beachside Robotics Software Team
-I suggest starting with TestHi, then TestInput, then check out the Robot class I made
+Basic Java Samples (only built to teach basics of Java):
 
-Or just follow the PowerPoint
+   - TestHi.Java: Test program that introduces the structure of classes and methods in Java.
 
-I hope these projects help introduce you to Java
+   - TestInput.Java: Test program that introduces how to build a scanner and run inputs.
+
+   - Robot.Java and Main.Java: Examples of a built class and the implementation of a class (objects). Used in PowerPoint as examples.
+
+
+
+FTC Java Samples (built to teach basics of FTC Programming):
+
+   - TestBench.Java: Mechanism class to configure and control a DC Motor.
+
+   - Test.Java: Example TeleOp code to control a single motor using a game controller
